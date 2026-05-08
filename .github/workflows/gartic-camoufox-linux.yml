@@ -9,7 +9,8 @@ jobs:
     # picks up immediately. Bonus: Linux Camoufox runs slightly hotter than
     # Windows (no Defender, no Update Orchestrator, no DWM compositing) and
     # ubuntu-* minutes are billed at 1x vs Windows' 2x.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest        # bigger runner pool than ubuntu-24.04;
+                                  # version-pinned labels saturate first.
     timeout-minutes: 358          # 2-min headroom under the 360 cap so the
                                   # successor-dispatch step always gets a slot.
 
